@@ -43,7 +43,7 @@ History page
 
 Single Video page
 
-User Profile page
+
 
 Login, Signup page
 
@@ -60,7 +60,6 @@ React Context API and useReducer
 
 React Player
 
-Capture UI - CSS Component Library
 
 MockBee
 
