@@ -62,6 +62,7 @@
 }
 .search-btn{
    all:unset;
+   cursor: pointer;
 }
 .navbar-right{
     flex:1;

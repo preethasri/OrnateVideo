@@ -37,13 +37,14 @@ label,p{
     border-radius: 5px;
     width:50%;
     margin-left: 25%;
+    cursor: pointer;
 }
 .sign-in-button-outlined {
     padding: 0.8rem;
     border: none;
     margin: 10px 10px;
     border:1px solid var(--primary-color);
-    
+    cursor: pointer;
     border-radius: 5px;
     width:90%;
 }
@@ -67,6 +68,7 @@ label,p{
     color: white;
     border-radius: 5px;
     margin: 1rem 0;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 700px) {

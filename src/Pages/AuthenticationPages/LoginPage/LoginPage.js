@@ -10,8 +10,8 @@ const LoginPage=()=>{
     const {passwordToggle,togglePassword}=useTogglePassword();
     const {setAuth}=useAuth();
     const [signinData,setSignInData]=useState({
-        email:"adarshbalika@gmail.com",
-        password:"adarshBalika123",
+        email:"swetha34@gmail.com",
+        password:"swetha@2",
     })
     const navigate=useNavigate()
     const [error,setError]=useState('')

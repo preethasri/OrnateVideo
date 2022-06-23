@@ -14,14 +14,14 @@ const SingleVideoPage=()=>{
     const[video,setVideo]=useState([])
     const {auth:{isAuthenticated}}=useAuth()
     const {history,addToHistoryVideos}=useHistory();
-    const {watchLater,addToWatchLaterVideos,removeFromWatchLaterVideos}=useWatchLater()
+    const {watchLaterVideos,addToWatchLaterVideos,removeFromWatchLaterVideos}=useWatchLater()
     const {likedVideos,addToLikedVideos,removeFromLikedVideos}=useLikes()
     const isInLikedPlaylist=isInPlaylists(video,likedVideos)
-    const isInWatchLater=isInPlaylists(video,watchLater)
+    const isInWatchLater=isInPlaylists(video,watchLaterVideos)
     const {videoID}=useParams();
     const[isPlaylistModalOpen,setIsPlaylistModalOpen]=useState(false)
 
-
+  
     useEffect(()=>{
        (async () =>{
     

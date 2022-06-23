@@ -5,12 +5,13 @@ import { SEARCH_TERM } from '../../reducers/constants'
 import { useAuth } from '../../Context'
 import { LogOutService } from '../../Services/AuthServices/logoutService'
 import toast from 'react-hot-toast'
-
+import { useLocation } from 'react-router-dom'
 const Navbar=({filtersState,filterDispatch})=>{
     const [searchInput,setSearchInput]=useState("")
     const {
         auth:{isAuthenticated,user},setAuth
     }=useAuth();
+    const {pathname}=useLocation()
         return(
             <>
             <div className='navbar-container'>
@@ -25,23 +26,27 @@ const Navbar=({filtersState,filterDispatch})=>{
                         </div>
                        
                     </div>
-                    <div className='navbar-center'>
-                      <div className='navbar-search'>
-                       <input className='search-input' placeholder='search for videos...'  value={searchInput}  onChange={e => {
-                     setSearchInput(e.target.value);
-                     filterDispatch({ type: SEARCH_TERM, payload: e.target.value });
-                    }}
-                         />
-                      
-                      <button className="search-btn">
-                         <span className='material-icons-outlined'>search</span>
+                    {pathname==="/" &&(
+                        <div className='navbar-center'>
+                        <div className='navbar-search'>
+                         <input className='search-input' placeholder='search for videos...'  value={searchInput}  onChange={e => {
+                       setSearchInput(e.target.value);
+                       filterDispatch({ type: SEARCH_TERM, payload: e.target.value });
+                      }}
+                           />
                         
-                      </button>
-                       
-                       
-                   
-                      </div>
-                  </div>
+                        <button className="search-btn" >
+                           <span className='material-icons-outlined'>search</span>
+                          
+                        </button>
+                         
+                         
+                     
+                        </div>
+                    </div>
+
+                    )}
+                    
                     
                     <div className='navbar-right'>
     
@@ -60,7 +65,7 @@ const Navbar=({filtersState,filterDispatch})=>{
                               <>
                               <div className="nav-user-and-logout">
                               <NavLink to="/"  className='link-tag '>
-                                 <div className='user-name'> hi {user.firstName}</div>
+                                 <div className='user-name'> welcome!</div>
 
                               </NavLink>
                               <div>

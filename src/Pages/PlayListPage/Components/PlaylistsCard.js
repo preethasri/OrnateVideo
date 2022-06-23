@@ -7,7 +7,7 @@ import "./PlaylistCard.css"
 
 const PlaylistCard=({playlist})=>{
     const{title,videos}=playlist;
-    console.log(videos)
+   
     const [isDeleteDialogBox,setIsDeleteDialogBox]=useState(false);
    const {auth:{token}}=useAuth()
    const{playlistDispatch}=usePlaylist()

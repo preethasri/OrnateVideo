@@ -76,7 +76,7 @@ const VideoCard=({video})=>{
                   } else{
                     navigate("/login")
                   }
-                }}><span className='material-icons'>watch_later</span>Added To Watch Later</button>
+                }}><span className='material-icons'>watch_later</span>Add To Watch Later</button>
                  )}
 
 

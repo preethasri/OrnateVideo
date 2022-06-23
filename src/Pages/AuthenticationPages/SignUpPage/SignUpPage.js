@@ -95,7 +95,7 @@ const SignUpPage=()=>{
         {error.isMatch && <span className="error">{error.isMatch}</span>}
         </div>
        </label>
-                <button className="sign-up"  type='submit' onClick={signupHandler}>Continue
+                <button className="login-form-link"  type='submit' onClick={signupHandler}>Continue
       </button>
             </div>
         </div>
@@ -103,7 +103,7 @@ const SignUpPage=()=>{
     <div className="login-form-info">
         <span>Already have an account? 
         <Link to="/login" >
-            <button className="login-form-link" >Login</button>
+            <button className="signup" >Login</button>
         </Link>
         </span>
     </div>

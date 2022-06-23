@@ -2,7 +2,8 @@
     display:grid;
     grid-template-columns: 300px 300px 300px ;
     gap:20px;
-    
+    align-items: center;
+    justify-content:center;
     margin-top:1rem;
 }
 .playlist-info{
@@ -11,8 +12,8 @@
     flex-direction: column;
     color:black;
     width:300px;
-    height:35vh;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    height:36vh;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 .playlist-img{
     padding:5px;
@@ -35,6 +36,7 @@
 }
 .delete-playlist-btn{
     border:none;
+    cursor: pointer;
 }
 .dialog-box-delete-btns{
     display: flex;
@@ -42,23 +44,27 @@
     align-items: center;
     justify-content: center;
     border:none;
+    
 }
 .playlist-btn{
     color:var(--secondary-color);
     font-size: 1.2rem;
     border:none;
     background-color: transparent;
+    cursor: pointer;
 }
 .playlist-delete-button{
     color:black;
     font-size:1.2rem;
     border:none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .nav-btn{
     text-decoration: none;
     color:var(--primary-color);
+    cursor: pointer;
 }
 .playlist-flex label{
     color :black;
@@ -110,10 +116,7 @@
         
        
     }
-    .playlist-info{
-        height:40vh;
-    }
-  
+    
 
 }
 @media only screen and (max-width:750px){
@@ -124,6 +127,15 @@
        justify-content:center;
        
     }
+    
+  
+}
+@media only screen and (max-width:550px){
+   .playlist-info{
+       height:40vh;
+       margin-left: 0px;
+
+   }
     
   
 }

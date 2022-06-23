@@ -30,11 +30,13 @@
     background-color: var(--primary-color);
     border-radius: 5px;
     color: white;
+    cursor: pointer;
 }
 
 .login-form-info {
     text-align: center;
     margin: 1rem;
+    cursor: pointer;
 }
 .login-form-info span{
     color:white;
