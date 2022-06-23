@@ -26,7 +26,7 @@ const [playlistName,setPlaylistName]=useState('')
              </div>
              {playlists.length >0 && <hr className='divider' />}
              {playlists.map(playlist =>(
-                 <PlaylistCheckbox playlist={playlist} key={playlist.id} video={video} />
+                 <PlaylistCheckbox playlist={playlist}  key={playlist._id}  video={video} />
              ))}
              <hr  className='divider'/>
              {showCreateNewPlaylist ?(<>
@@ -42,7 +42,7 @@ const [playlistName,setPlaylistName]=useState('')
 
                    </div>
                    <input type="text"  className='input' placeholder='Enter Playlist Name..' autoComplete='off' value={playlistName} onChange={(e)=>setPlaylistName(e.target.value)}/>
-                  <button className='dialog-box-button' onClick={()=>{
+                  <button className='dialog-box-button' disabled={!playlistName} onClick={()=>{
                       createNewPlaylists(token,playlistName,playlistDispatch)
                       setPlaylistName("")
                       setShowCreateNewPlaylist(false)

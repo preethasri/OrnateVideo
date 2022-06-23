@@ -17,7 +17,7 @@ const VideoCard=({video})=>{
     auth:
     {isAuthenticated}}=useAuth();
   const {likedVideos,removeFromLikedVideos,addToLikedVideos}=useLikes()
-  const {watchLaterVideos,removeFromWatchlater,addToWatchlater}=useWatchLater()
+  const {watchLaterVideos,removeFromWatchLaterVideos,addToWatchLaterVideos}=useWatchLater()
   const isInLikedVideos=isInPlaylists(video,likedVideos)
   const isInWatchLater=isInPlaylists(video,watchLaterVideos)
     return(
@@ -66,17 +66,17 @@ const VideoCard=({video})=>{
                     )}
                  
                  {isInWatchLater ?(
-                 <button className='dropdown-btn' onClick={()=>removeFromWatchlater(video)}><span className='material-icons'>watch_later</span>Added To Watch Later</button>
+                 <button className='dropdown-btn' onClick={()=>removeFromWatchLaterVideos(video)}><span className='material-icons'>watch_later</span>Added To Watch Later</button>
 
                  ):(
                   <button className='dropdown-btn' onClick={()=>{
                     if(isAuthenticated){
-                      addToWatchlater(video)
+                      addToWatchLaterVideos(video)
 
                   } else{
                     navigate("/login")
                   }
-                }}><span className='material-icons'>watch_later</span>Added To Watch Later</button>
+                }}><span className='material-icons'>watch_later</span>Add To Watch Later</button>
                  )}
 
 

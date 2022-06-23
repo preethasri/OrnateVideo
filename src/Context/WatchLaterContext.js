@@ -35,7 +35,7 @@ const WatchLaterProvider=({children})=>{
        
     },[isAuthenticated,token])
  
-    const addToWatchlater = async video => {
+    const addToWatchLaterVideos = async video => {
         try {
           const response = await addWatchLater(token, video);
           setWatchLaterVideos(response.data.watchlater);
@@ -47,20 +47,18 @@ const WatchLaterProvider=({children})=>{
         }
       };
     
-      const removeFromWatchlater = async video => {
+      const removeFromWatchLaterVideos = async video => {
         try {
           const response = await removeWatchLater(token, video);
           setWatchLaterVideos(response.data.watchlater);
           toast("Video removed from Watch Later");
         } catch (error) {
-          console.error("ERROR", error);
-          toast.error("Error");
-          return error;
+            console.log(error)
         }
       };
     
     return(
-       <WatchLaterContext.Provider value={{watchLaterVideos,setWatchLaterVideos,addToWatchlater,removeFromWatchlater}}>
+       <WatchLaterContext.Provider value={{watchLaterVideos,setWatchLaterVideos,addToWatchLaterVideos,removeFromWatchLaterVideos}}>
            {children}
        </WatchLaterContext.Provider>
     )

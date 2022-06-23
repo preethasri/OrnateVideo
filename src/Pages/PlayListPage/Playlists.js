@@ -7,7 +7,7 @@ const Playlists=()=>{
     const {
         playlistState:{playlists},
     }=usePlaylist();
-
+  console.log(playlists)
     return(
         <>
         <Navbar />

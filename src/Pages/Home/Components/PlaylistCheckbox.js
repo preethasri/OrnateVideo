@@ -20,7 +20,7 @@ const PlaylistCheckbox=({playlist,video})=>{
            setIsChecked(true)
        }
     }
-
+   console.log(playlist)
     return(
         <>
         <div className='dialog-box-input-checkbox' onClick={checkboxHandler}>

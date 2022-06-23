@@ -14,14 +14,14 @@ const SingleVideoPage=()=>{
     const[video,setVideo]=useState([])
     const {auth:{isAuthenticated}}=useAuth()
     const {history,addToHistoryVideos}=useHistory();
-    const {watchLater,addToWatchlater,removeFromWatchlater}=useWatchLater()
+    const {watchLaterVideos,addToWatchLaterVideos,removeFromWatchLaterVideos}=useWatchLater()
     const {likedVideos,addToLikedVideos,removeFromLikedVideos}=useLikes()
     const isInLikedPlaylist=isInPlaylists(video,likedVideos)
-    const isInWatchLater=isInPlaylists(video,watchLater)
+    const isInWatchLater=isInPlaylists(video,watchLaterVideos)
     const {videoID}=useParams();
     const[isPlaylistModalOpen,setIsPlaylistModalOpen]=useState(false)
 
-
+  
     useEffect(()=>{
        (async () =>{
     
@@ -93,13 +93,13 @@ const SingleVideoPage=()=>{
                         thumb_up
 
                     </button>
-                    <button className={`video-page-btn material-icons ${isInWatchLater && 'video-btn-watchlater'}`}
+                    <button className={`video-page-btn material-icons ${isInWatchLater && 'video-btn-active'}`}
                       onClick={()=>{
-                        isInWatchLater ?
-                        removeFromWatchlater(video)  
-                        :isAuthenticated 
-                        ?addToWatchlater(video)
-                        :navigate('/login')
+                          isInWatchLater ?
+                          removeFromWatchLaterVideos(video)  
+                          :isAuthenticated 
+                          ?addToWatchLaterVideos(video)
+                          :navigate('/login')
                       }}
 
                     >
