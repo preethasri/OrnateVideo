@@ -36,6 +36,7 @@
 }
 .delete-playlist-btn{
     border:none;
+    cursor: pointer;
 }
 .dialog-box-delete-btns{
     display: flex;
@@ -43,23 +44,27 @@
     align-items: center;
     justify-content: center;
     border:none;
+    
 }
 .playlist-btn{
     color:var(--secondary-color);
     font-size: 1.2rem;
     border:none;
     background-color: transparent;
+    cursor: pointer;
 }
 .playlist-delete-button{
     color:black;
     font-size:1.2rem;
     border:none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .nav-btn{
     text-decoration: none;
     color:var(--primary-color);
+    cursor: pointer;
 }
 .playlist-flex label{
     color :black;

@@ -16,6 +16,7 @@
     color:white;
     border-bottom: 1px solid var(--secondary-color);
     font-size: 1.1rem;
+    cursor: pointer;
 }
 
 .text-sm{
@@ -58,6 +59,7 @@
     background-color: var(--primary-color);
     color:var(--secondary-color);
     border:none;
+    
 }
 
 .image-content img{

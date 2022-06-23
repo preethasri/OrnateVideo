@@ -9,8 +9,7 @@ const SinglePlaylist=()=>{
     const playlist=playlists.find(playlist=>playlist._id===playlistID)
     const {title,videos}=playlist
     
-    console.log(videos)
-
+    
     return(
         <>
          <Navbar />

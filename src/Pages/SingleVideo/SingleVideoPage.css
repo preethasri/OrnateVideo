@@ -47,6 +47,7 @@
     background-color: var(--primary-color);
     border:none;
     color:white;
+    cursor: pointer;
 }
 .video-page-content{
     margin-top: 0.8rem;
@@ -57,9 +58,11 @@
 }
 .video-btn-active{
     color:var(--secondary-color);
+    cursor: pointer;
 }
 .video-btn-watchlater{
     color:var(--secondary-color);
+    cursor: pointer;
 }
 @media only screen and (max-width : 1024px){
     .video-src{

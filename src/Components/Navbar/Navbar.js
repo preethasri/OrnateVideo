@@ -35,7 +35,7 @@ const Navbar=({filtersState,filterDispatch})=>{
                       }}
                            />
                         
-                        <button className="search-btn">
+                        <button className="search-btn" >
                            <span className='material-icons-outlined'>search</span>
                           
                         </button>
