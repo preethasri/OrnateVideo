@@ -42,6 +42,7 @@
     gap:10px;
     
 }
+
 .video-page-btn{
     background-color: var(--primary-color);
     border:none;
@@ -53,6 +54,12 @@
 .video-creator{
     display: flex;
     align-items: center;
+}
+.video-btn-active{
+    color:var(--secondary-color);
+}
+.video-btn-watchlater{
+    color:var(--secondary-color);
 }
 @media only screen and (max-width : 1024px){
     .video-src{
